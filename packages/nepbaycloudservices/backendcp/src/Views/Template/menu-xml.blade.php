@@ -1,0 +1,41 @@
+<?php echo '<?xml version="1.0" encoding="UTF-8"?>'; ?>
+<menu>
+    <title>Template</title>
+    <icon>ti-layout-grid3-alt</icon>
+    <submenu>
+        <title>Appearance</title>
+        <url>{{route('admin.template.list')}}</url>
+    </submenu>
+    <submenu>
+        <title>Header</title>
+        <url>{{route('admin.template',['Header'])}}</url>
+    </submenu>
+    <submenu>
+        <title>Course</title>
+        <url>{{route('admin.template',['Course'])}}</url>
+    </submenu>
+    <submenu>
+        <title>Teacher</title>
+        <url>{{route('admin.template',['Teacher'])}}</url>
+    </submenu>
+    <submenu>
+        <title>Feature</title>
+        <url>{{route('admin.template',['Feature'])}}</url>
+    </submenu>
+    <submenu>
+        <title>News</title>
+        <url>{{route('admin.template',['News'])}}</url>
+    </submenu>
+    <submenu>
+        <title>Testimonial</title>
+        <url>{{route('admin.template',['Testimonial'])}}</url>
+    </submenu>
+    <submenu>
+        <title>Contact Us</title>
+        <url>{{route('admin.template',['Contact'])}}</url>
+    </submenu>
+    <submenu>
+        <title>Footer</title>
+        <url>{{route('admin.template',['Footer'])}}</url>
+    </submenu>
+</menu>

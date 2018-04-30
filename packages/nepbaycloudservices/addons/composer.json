@@ -1,0 +1,28 @@
+{
+    "name": "nepbaycloudservices/addons",
+    "description": "Addons for all nepbaycloudservices packages",    
+    "license": "MIT",
+    "minimum-stability": "stable",
+    "authors": [
+        {
+            "name": "rajeshtandukar",
+            "email": "rtandukar@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {        
+        "psr-4": {            
+            "Nepbaycloudservices\\Addons\\":"src/"            
+        }
+    },    
+    "extra": {
+        "laravel": {           
+            "providers":[
+                "Nepbaycloudservices\\Addons\\AddonsServiceProvider"                    
+            ],
+             "aliases": {
+                "Addons": "Nepbaycloudservices\\Addons\\AddonsFacade"
+            }
+        }
+    }    
+}

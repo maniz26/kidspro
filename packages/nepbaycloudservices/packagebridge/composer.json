@@ -1,0 +1,28 @@
+{
+    "name": "nepbaycloudservices/packagebridge",
+    "description": "Bridge for all nepbaycloudservices packages",    
+    "license": "MIT",
+    "minimum-stability": "stable",
+    "authors": [
+        {
+            "name": "rajeshtandukar",
+            "email": "rtandukar@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {        
+        "psr-4": {            
+            "Nepbaycloudservices\\PackageBridge\\":"src/"            
+        }
+    },    
+    "extra": {
+        "laravel": {           
+            "providers":[
+                "Nepbaycloudservices\\PackageBridge\\PackageBridgeServiceProvider"                    
+            ],
+             "aliases": {
+                "Packagebridge": "Nepbaycloudservices\\PackageBridge\\PackageBridgeFacade"
+            }
+        }
+    }    
+}

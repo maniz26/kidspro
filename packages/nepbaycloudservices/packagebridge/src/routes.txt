@@ -1,0 +1,30 @@
+Route::group(['prefix'=>'backend'],function(){
+
+	Route::group(['middleware'=>'admin','namespace' =>'Nepbaycloudservices\Backendcp\Controllers'], function(){
+		
+		Route::get('/',							'BackendController@index')->name('backend');		
+		Route::get('addons/list',				'AddonController@index')->name('addons.list');
+		Route::get('addons/install',			'AddonController@install')->name('addons.install');
+		Route::post('addons/save',				'AddonController@save')->name('addons.save');
+		Route::get('addons/data',				'AddonController@getdata')->name('addons.data');	
+		Route::get('addons/status/{id}',		'AddonController@updateStatus')->name('addons.status');
+		Route::get('addons/uninstall/{id}',		'AddonController@uninstall')->name('addons.uninstall');
+		Route::get('modules/list',				'ModuleModuleController@index')->name('modules.list');
+		Route::get('modules/install',			'ModuleModuleController@install')->name('modules.install');
+		Route::post('modules/save',				'ModuleModuleController@save')->name('modules.save');
+		Route::get('modules/data',				'ModuleModuleController@getdata')->name('modules.data');	
+		Route::get('modules/status/{id}',		'ModuleModuleController@updateStatus')->name('modules.status');
+		Route::get('modules/uninstall/{id}',	'ModuleModuleController@uninstall')->name('modules.uninstall');				
+		
+	});
+
+	Route::namespace('Nepbaycloudservices\Backendcp\Controllers\Auth')->group(function () {
+
+        Route::get('login',                  'LoginController@showLoginForm')->name('admin.login');
+        Route::post('login',                 'LoginController@login');
+        Route::any('logout',                 'LoginController@logout')->name('admin.logout');
+        Route::get('password-reset',         'ForgotPasswordController@showLinkRequestForm')->name('admin.reset.password');    
+
+    });
+
+});

@@ -1,0 +1,28 @@
+{
+    "name": "nepbaycloudservices/backendcp",
+    "description": "Admin Control Panel for all nepbaycloudservices packages",    
+    "license": "MIT",
+    "minimum-stability": "stable",
+    "authors": [
+        {
+            "name": "rajeshtandukar",
+            "email": "rtandukar@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {        
+        "psr-4": {            
+            "Nepbaycloudservices\\Backendcp\\":"src/"            
+        }        
+    },    
+    "extra": {
+        "laravel": {           
+            "providers":[
+                "Nepbaycloudservices\\Backendcp\\BackendCpServiceProvider"                    
+            ],
+             "aliases": {
+                "Backendcp": "Nepbaycloudservices\\Backendcp\\BackendcpFacade"
+            }
+        }
+    }    
+}

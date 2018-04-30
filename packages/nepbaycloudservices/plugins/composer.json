@@ -1,0 +1,28 @@
+{
+    "name": "nepbaycloudservices/plugins",
+    "description": "Plugins for nepbaycloudservices packages",    
+    "license": "MIT",
+    "minimum-stability": "stable",
+    "authors": [
+        {
+            "name": "rajeshtandukar",
+            "email": "rtandukar@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {        
+        "psr-4": {            
+            "Nepbaycloudservices\\Plugins\\":"src/"            
+        }        
+    },    
+    "extra": {
+        "laravel": {           
+            "providers":[
+                "Nepbaycloudservices\\Plugins\\PluginsServiceProvider"                    
+            ],
+             "aliases": {
+                "Plugins": "Nepbaycloudservices\\Plugins\\PluginsFacade"
+            }
+        }
+    }    
+}
